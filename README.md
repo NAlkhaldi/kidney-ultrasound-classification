@@ -20,4 +20,4 @@ This repository implements a pipeline for segmenting and classifying kidney ultr
 Models saved in `outputs/`. Metrics in JSON/CSV.
 
 ## License
-MIT
+This project is licensed under the MIT License. During review, access is restricted to authorized reviewers.
