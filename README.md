@@ -45,6 +45,28 @@ This repository implements a pipeline for segmenting and classifying kidney ultr
    - Place the label CSV (`labell.csv`) in `data/raw_data/annotated_data/`.
    - For Google Colab, store data in Google Drive (e.g., `/content/drive/MyDrive/Datasets/Projec_Unetbased/`) and update script paths accordingly.
 
+kidney-ultrasound-classification/
+├── data/
+│   ├── raw_data/
+│   │   ├── images/
+│   │   ├── annotated_data/
+│   │   └── masks/
+│   ├── pseudo_masks/
+│   ├── segmented_kidneys/
+│   └── processed_data/
+│       └── annotated_segmented_kidneys/
+├── scripts/
+│   ├── generate_masks.py
+│   ├── train_teacher_model.py
+│   ├── train_student_model.py
+│   ├── segment_kidneys.py
+│   └── kidney_disease_classification_unet.py
+├── results/
+│   ├── models/
+│   ├── metrics/
+│   └── visualizations/
+├── requirements.txt
+└── README.md
 ## Running Experiments
 
 - **Generate Masks**:
