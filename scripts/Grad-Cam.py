@@ -272,7 +272,7 @@ for alias, tname in backbones:
 results_df = pd.DataFrame(results)
 display(results_df.style.highlight_max(subset=['Acc','F1','AUC'], color='lightgreen')
                          .highlight_min(subset=['Params_M','Infer_ms'], color='lightcoral'))
-results_df.to_csv(os.path.join(FINAL_RESULTS_DIR, f"FINAL_RESULTS_SUMMARY_GT_seed{SEED}.csv"), index=False)
+results_df.to_csv(os.path.join(FINAL_RESULTS_DIR, f"FINAL_RESULTS_SUMMARY_seed{SEED}.csv"), index=False)
 
 # =============================== PERFECT GRAD-CAM ===============================
 from pytorch_grad_cam import HiResCAM
@@ -280,7 +280,7 @@ from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 from pytorch_grad_cam.utils.image import show_cam_on_image
 import cv2
 
-# Load the best model (ResNet50 Dual_Input – highest F1 in your run)
+# Load the best model (ResNet50 Dual_Input – highest F1 )
 best_model = timm.create_model("resnet50", pretrained=False, num_classes=3)
 best_model = make_dual_model(best_model)
 best_model.load_state_dict(torch.load(os.path.join(FINAL_RESULTS_DIR, "ResNet50_Dual_Input_seed42_best.pth")))
